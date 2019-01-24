@@ -1,8 +1,9 @@
-package lghsbc.cwierkacz.demo.service;
+package lghsbc.cwierkacz.demo.co.service;
+
+import lghsbc.cwierkacz.demo.users.service.UserService;
+import org.junit.Test;
 
 import java.util.Set;
-
-import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

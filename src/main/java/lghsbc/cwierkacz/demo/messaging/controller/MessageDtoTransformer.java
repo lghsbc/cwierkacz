@@ -1,7 +1,7 @@
-package lghsbc.cwierkacz.demo.controller;
+package lghsbc.cwierkacz.demo.messaging.controller;
 
-import lghsbc.cwierkacz.demo.configuration.Message;
-import lghsbc.cwierkacz.demo.controller.dto.GetMessageDto;
+import lghsbc.cwierkacz.demo.messaging.controller.dto.GetMessageDto;
+import lghsbc.cwierkacz.demo.messaging.domain.Message;
 import org.springframework.stereotype.Component;
 
 @Component

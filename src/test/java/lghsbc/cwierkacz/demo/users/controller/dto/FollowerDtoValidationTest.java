@@ -1,4 +1,4 @@
-package lghsbc.cwierkacz.demo.controller.dto;
+package lghsbc.cwierkacz.demo.users.controller.dto;
 
 
 import org.junit.Test;

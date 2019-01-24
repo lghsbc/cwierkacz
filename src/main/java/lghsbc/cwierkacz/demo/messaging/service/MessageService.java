@@ -1,4 +1,7 @@
-package lghsbc.cwierkacz.demo.service;
+package lghsbc.cwierkacz.demo.messaging.service;
+
+import lghsbc.cwierkacz.demo.messaging.domain.Message;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
@@ -8,9 +11,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
-
-import lghsbc.cwierkacz.demo.configuration.Message;
-import org.springframework.stereotype.Repository;
 
 @Repository
 public class MessageService {

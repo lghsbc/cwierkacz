@@ -1,4 +1,4 @@
-package lghsbc.cwierkacz.demo.controller.dto;
+package lghsbc.cwierkacz.demo.messaging.controller.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

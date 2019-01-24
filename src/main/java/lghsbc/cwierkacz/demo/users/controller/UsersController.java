@@ -1,12 +1,12 @@
-package lghsbc.cwierkacz.demo.controller;
+package lghsbc.cwierkacz.demo.users.controller;
 
-import lghsbc.cwierkacz.demo.controller.dto.FollowerDto;
-import lghsbc.cwierkacz.demo.service.UserService;
+import lghsbc.cwierkacz.demo.users.controller.dto.FollowerDto;
+import lghsbc.cwierkacz.demo.users.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-import static lghsbc.cwierkacz.demo.controller.UsersController.API_ENDPOINT;
+import static lghsbc.cwierkacz.demo.users.controller.UsersController.API_ENDPOINT;
 
 @RestController
 @RequestMapping(API_ENDPOINT)

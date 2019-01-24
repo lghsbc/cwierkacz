@@ -1,9 +1,9 @@
-package lghsbc.cwierkacz.demo.service;
+package lghsbc.cwierkacz.demo.messaging.service;
+
+import lghsbc.cwierkacz.demo.messaging.domain.Message;
+import org.junit.Test;
 
 import java.util.List;
-
-import lghsbc.cwierkacz.demo.configuration.Message;
-import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

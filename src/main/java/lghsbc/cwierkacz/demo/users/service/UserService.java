@@ -1,11 +1,11 @@
-package lghsbc.cwierkacz.demo.service;
+package lghsbc.cwierkacz.demo.users.service;
+
+import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-
-import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {

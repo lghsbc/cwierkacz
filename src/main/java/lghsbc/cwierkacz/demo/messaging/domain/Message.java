@@ -1,13 +1,13 @@
-package lghsbc.cwierkacz.demo.controller.dto;
+package lghsbc.cwierkacz.demo.messaging.domain;
 
 import java.time.LocalDateTime;
 
-public class GetMessageDto {
+public class Message {
     private final String userId;
     private final String text;
     private final LocalDateTime createdAt;
 
-    public GetMessageDto(String userId, String text, LocalDateTime createdAt) {
+    public Message(String userId, String text, LocalDateTime createdAt) {
         this.userId = userId;
         this.text = text;
         this.createdAt = createdAt;

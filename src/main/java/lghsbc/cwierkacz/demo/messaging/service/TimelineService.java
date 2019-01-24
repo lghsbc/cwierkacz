@@ -1,11 +1,12 @@
-package lghsbc.cwierkacz.demo.service;
+package lghsbc.cwierkacz.demo.messaging.service;
+
+import lghsbc.cwierkacz.demo.messaging.domain.Message;
+import lghsbc.cwierkacz.demo.users.service.UserService;
+import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import lghsbc.cwierkacz.demo.configuration.Message;
-import org.springframework.stereotype.Service;
 
 @Service
 public class TimelineService {

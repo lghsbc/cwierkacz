@@ -1,6 +1,6 @@
-package lghsbc.cwierkacz.demo.controller;
+package lghsbc.cwierkacz.demo.users.controller;
 
-import lghsbc.cwierkacz.demo.service.UserService;
+import lghsbc.cwierkacz.demo.users.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static lghsbc.cwierkacz.demo.controller.UsersController.API_ENDPOINT;
+import static lghsbc.cwierkacz.demo.users.controller.UsersController.API_ENDPOINT;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;

@@ -1,23 +1,17 @@
-package lghsbc.cwierkacz.demo.controller;
+package lghsbc.cwierkacz.demo.messaging.controller;
+
+import lghsbc.cwierkacz.demo.messaging.controller.dto.GetMessageDto;
+import lghsbc.cwierkacz.demo.messaging.controller.dto.PostMessageDto;
+import lghsbc.cwierkacz.demo.messaging.service.MessageService;
+import lghsbc.cwierkacz.demo.messaging.service.TimelineService;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import lghsbc.cwierkacz.demo.controller.dto.GetMessageDto;
-import lghsbc.cwierkacz.demo.controller.dto.PostMessageDto;
-import lghsbc.cwierkacz.demo.service.MessageService;
-import lghsbc.cwierkacz.demo.service.TimelineService;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
-
-import static lghsbc.cwierkacz.demo.controller.MessagesController.API_ENDPOINT;
+import static lghsbc.cwierkacz.demo.messaging.controller.MessagesController.API_ENDPOINT;
 
 @RestController
 @RequestMapping(API_ENDPOINT)

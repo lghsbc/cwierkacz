@@ -1,4 +1,4 @@
-package lghsbc.cwierkacz.demo.controller.dto;
+package lghsbc.cwierkacz.demo.messaging.controller.dto;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;

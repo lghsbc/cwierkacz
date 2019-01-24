@@ -1,9 +1,10 @@
-package lghsbc.cwierkacz.demo.service;
+package lghsbc.cwierkacz.demo.messaging.service;
 
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import lghsbc.cwierkacz.demo.configuration.Message;
+import lghsbc.cwierkacz.demo.messaging.domain.Message;
+import lghsbc.cwierkacz.demo.users.service.UserService;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
