@@ -1,7 +1,6 @@
 package lghsbc.cwierkacz.demo.controller;
 
 import lghsbc.cwierkacz.demo.service.MessageService;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,4 +44,17 @@ public class MessagesControllerPostMessageTest {
         verify(messageService).addNewMessageForUser(userId, text);
     }
 
+    @Test
+    public void shouldRejectInvalidBodyInPostMessage() throws Exception {
+        String userId = "userId";
+        String invalidText = "";
+
+        mockMvc.perform(post(API_ENDPOINT + "/" + userId)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"text\":\"" + invalidText + "\"}"))
+                .andDo(print())
+                .andExpect(status().isBadRequest());
+
+        verify(messageService, never()).addNewMessageForUser(anyString(), anyString());
+    }
 }
