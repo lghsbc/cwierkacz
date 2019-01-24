@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import lghsbc.cwierkacz.demo.controller.dto.GetMessageDto;
 import lghsbc.cwierkacz.demo.controller.dto.PostMessageDto;
 import lghsbc.cwierkacz.demo.service.MessageService;
+import lghsbc.cwierkacz.demo.service.TimelineService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,10 +26,12 @@ public class MessagesController {
     static final String API_ENDPOINT = "/messages";
     private final MessageService messageService;
     private final MessageDtoTransformer transformer;
+    private final TimelineService timelineService;
 
-    public MessagesController(MessageService messageService, MessageDtoTransformer transformer) {
+    public MessagesController(MessageService messageService, MessageDtoTransformer transformer, TimelineService timelineService) {
         this.messageService = messageService;
         this.transformer = transformer;
+        this.timelineService = timelineService;
     }
 
     @PostMapping("{userId}")
@@ -44,6 +47,10 @@ public class MessagesController {
                 .collect(Collectors.toList());
     }
 
-
-    //    GET /messages/{userId}/following
+    @GetMapping("{userId}/following")
+    public List<GetMessageDto> getFollowedMessages(@PathVariable String userId){
+        return timelineService.getFollowedMessages(userId).stream()
+                .map(transformer::toGetMessageDto)
+                .collect(Collectors.toList());
+    }
 }
