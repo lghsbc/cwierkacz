@@ -1,6 +1,5 @@
-package lghsbc.cwierkacz.demo.co.service;
+package lghsbc.cwierkacz.demo.users.service;
 
-import lghsbc.cwierkacz.demo.users.service.UserService;
 import org.junit.Test;
 
 import java.util.Set;
